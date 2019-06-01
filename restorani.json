@@ -33,7 +33,7 @@ data='[
 		"cena":890
 		},
 		{
-		"naziv":"Pizza Porketa"
+		"naziv":"Pizza Porketa",
 		"slika":"img/restorani/novibeograd/pizzabar/jela/Porketa.jpg",
 		"cena":910
 		},
@@ -275,6 +275,128 @@ data='[
 		"naziv":"Vitaminska salata",
 		"slika":"img/restorani/vozdovac/obrok/jela/VitaminskaSalata.jpg",
 		"cena":680
+		}
+	]
+},
+
+{
+	"ime":"Restoran Kuhinja",
+	"tip hrane":["Rostilj","Salate"],
+	"lokacija":{
+		"grad":"Beograd",
+		"opstina":"Vozdovac",
+		"adresa":"Vojvode Stepe 93"
+		},
+	"slike":["1","2","3","4","5"],
+	"informacije":"Formalno - ziva muzika - ukusno",
+	"kratak opis":"Restoran kuhinja nudi vam klasicna jela svih vrsta. Nas kuvar dobtinik je prestizne Miselinove nagrade i opravdace vasa ocekivanja."
+	"ocene":[],
+	"jela":[
+		{
+		"naziv":"Domaća dimljena kobasica",
+		"slika":"img/restorani/vozdovac/kuhinja/jela/DomacaKobasica.jpg",
+		"cena":700
+		},
+		{
+		"naziv":"Pileca salata",
+		"slika":"img/restorani/vozdovac/kuhinja/jela/PilecaSalata.jpg",
+		"cena":660
+		},
+		{
+		"naziv":"Cezar salata",
+		"slika":"img/restorani/vozdovac/kuhinja/jela/CezarSalata.jpg",
+		"cena":640
+		},
+		{
+		"naziv":"Cevapi na kajmaku",
+		"slika":"img/restorani/vozdovac/kuhinja/jela/CevapiNaKajmaku.jpg",
+		"cena":730
+		},
+		{
+		"naziv":"Gurmanska vesalica",
+		"slika":"img/restorani/vozdovac/kuhnija/jela/GurmanskaVesalica.jpg",
+		"cena":840
+		}
+	]
+},
+
+{
+	"ime":"Makao",
+	"tip hrane":["Kineska hrana"],
+	"lokacija":{
+		"grad":"Beograd",
+		"opstina":"Zemun",
+		"adresa":"Prve pruge 8"
+		},
+	"slike":["1","2","3","4","5"],
+	"informacije":"Neformalno - kineska hrana",
+	"kratak opis":"Ovde cete uzivati u kineskim specijalitetima. Slatko, kiselo, slano ili ljuto, nudimo vam svaki moguci ukus za svakog!"
+	"ocene":[],
+	"jela":[
+		{
+		"naziv":"Govedina u soja sosu",
+		"slika":"img/restorani/vozdovac/obrok/jela/GovedinaSoja.jpg",
+		"cena":720
+		},
+		{
+		"naziv":"Piletina sa kikirikijem",
+		"slika":"img/restorani/vozdovac/obrok/jela/PiletinaKikiriki.jpg",
+		"cena":710
+		},
+		{
+		"naziv":"Svinjetina u kamenica sosu",
+		"slika":"img/restorani/vozdovac/obrok/jela/SvinjetinaKamenica.jpg",
+		"cena":850
+		},
+		{
+		"naziv":"Junetina sa kineskim pecurkama i bambusom",
+		"slika":"img/restorani/vozdovac/obrok/jela/JunetinaPecurke.jpg",
+		"cena":730
+		},
+		{
+		"naziv":"Piletina na celicnoj ploci",
+		"slika":"img/restorani/vozdovac/obrok/jela/PiletinaPloca.jpg",
+		"cena":840
+		}
+	]
+},
+{
+	"ime":"Saran",
+	"tip hrane":["Riba","Salate","Pasta"],
+	"lokacija":{
+		"grad":"Beograd",
+		"opstina":"Zemun",
+		"adresa":"Kej Oslobođenja 53"
+		},
+	"slike":["1","2","3","4","5"],
+	"informacije":"Formalno - plodovi mora - riba",
+	"kratak opis":"Uzivajte u vrhunskoj svezoj ribi i plodovima mora. Narucite svoj obrok za vreme Hvarskih, Peljeskih ili Istarskih dana i dozivite Mediteransku caroliju"
+	"ocene":[],
+	"jela":[
+		{
+		"naziv":"Fileti smudja",
+		"slika":"img/restorani/zemun/saran/jela/FiletiSmudja.jpg",
+		"cena":1450
+		},
+		{
+		"naziv":"Pasta sa plodovima mora",
+		"slika":"img/restorani/zemun/saran/jela/Pasta.jpg",
+		"cena":1380
+		},
+		{
+		"naziv":"Rizoto sa plodovima mora",
+		"slika":"img/restorani/zemun/saran/jela/Rizoto.jpg",
+		"cena":1240
+		},
+		{
+		"naziv":"Saran na mediteranski nacin",
+		"slika":"img/restorani/vozdovac/obrok/jela/Saran.jpg",
+		"cena":1320
+		},
+		{
+		"naziv":"Grilovani smudj",
+		"slika":"img/restorani/vozdovac/obrok/jela/Smudj.jpg",
+		"cena":1600
 		}
 	]
 }
