@@ -1,0 +1,3 @@
+proveriti breadcrumbove da li su dobri
+proveriti sve linkove da li vode ikuda i dopuniti sa stranicama koje djolo dodaje
+proveri titlove svih stranica OBAVEZNO NISU DOBRI!
