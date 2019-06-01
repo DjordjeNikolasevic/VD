@@ -1,3 +1,4 @@
+data='[
 {
 	"ime":"Pizza Bar",
 	"tip hrane":["Pice","Paste","Rostilj","Salate","Sendvici","Poslastice"],
@@ -52,7 +53,7 @@
 		"cena":710
 		}
 	]
-}
+},
 
 {
 	"ime":"Suhsi Dream",
@@ -103,7 +104,7 @@
 		"cena":540
 		}
 	]
-}
+},
 
 
 {
@@ -145,7 +146,7 @@
 		"cena":670
 		}	
 	]
-}
+},
 
 
 
@@ -193,7 +194,7 @@
 		"cena":770
 		}
 	]
-}
+},
 
 
 {
@@ -235,4 +236,46 @@
 		"cena":520
 		}
 	]
+},
+
+{
+	"ime":"Obrok ketering",
+	"tip hrane":["Dorucak","Salate","Rostilj"],
+	"lokacija":{
+		"grad":"Beograd",
+		"opstina":"Vozdovac",
+		"adresa":"Milana Rakića 86g"
+		},
+	"slike":["1","2","3","4","5"],
+	"informacije":"Neformalno - dijetalno - ukusno",
+	"kratak opis":"Ukoliko ste fit i trazite zdrav i ukusan obrok, ovo je mesto za vas. Uzivajte u raznim specijalitetima nakon iscrpljujuceg treninga i nadoknadite izgubljene kalorije!",
+	"ocene":[],
+	"jela":[
+		{
+		"naziv":"Jaje na oko sa slaninom",
+		"slika":"img/restorani/vozdovac/obrok/jela/JajeSaSlaninom.jpg",
+		"cena":450
+		},
+		{
+		"naziv":"Omlet sa sunkom i sirom",
+		"slika":"img/restorani/vozdovac/obrok/jela/OmletSunkaSir.jpg",
+		"cena":490
+		},
+		{
+		"naziv":"Pileci stapici u susamu",
+		"slika":"img/restorani/vozdovac/obrok/jela/PileciStapiciUSusamu.jpg",
+		"cena":730
+		},
+		{
+		"naziv":"Przenice",
+		"slika":"img/restorani/vozdovac/obrok/jela/Przenice.jpg",
+		"cena":540
+		},
+		{
+		"naziv":"Vitaminska salata",
+		"slika":"img/restorani/vozdovac/obrok/jela/VitaminskaSalata.jpg",
+		"cena":680
+		}
+	]
 }
+]';
