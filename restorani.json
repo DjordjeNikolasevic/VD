@@ -1,0 +1,55 @@
+{
+	"ime":"Pizza Bar",
+	"tip hrane":["Pice","Paste","Rostilj","Salate","Sendvici","Poslastice"],
+	"lokacija":{
+		"grad":"Beograd",
+		"opstina":"Novi Beograd",
+		"adresa":"Bulevar Mihajla Pupina 165"
+		},
+	"slike":["1","2","3","4","5"],
+	"informacije":"Udobno-neformalno-ukusna hrana",
+	"kratak opis":"Pizza Bar Novi Beograd je mesto koje odise pozitivnom energijom. Nudi vam najbolje italijanske i svestske specijalitete po dostupnoj ceni. Ukoliko ste pravi gurman, onda je ovo mesto za vas!",
+	"ocene":[],
+	"jela":[
+		{
+		"naziv":"Pasta Arabiata",
+		"slika":"img/restorani/novibeograd/pizzabar/Arabiata.jpg",
+		"cena":680
+		},
+		{
+		"naziv":"Biftek sa vrganjima",
+		"slika":"img/restorani/novibeograd/pizzabar/BiftekVrganji.jpg",
+		"cena":1260
+		},
+		{
+		"naziv":"Grilovana piletina",
+		"slika":"img/restorani/novibeograd/pizzabar/GrilovanaPiletina.jpg",
+		"cena":730
+		},
+		{
+		"naziv":"Pizza Inverno",
+		"slika":"img/restorani/novibeograd/pizzabar/Inverno.jpg",
+		"cena":890
+		},
+		{
+		"naziv":"Pizza Porketa"
+		"slika":"img/restorani/novibeograd/pizzabar/Porketa.jpg",
+		"cena":910
+		},
+		{
+		"naziv":"Pizza Siena",
+		"slika":"img/restorani/novibeograd/pizzabar/Siena.jpg",
+		"cena":950
+		},
+		{
+		"naziv":"Sendvic sa piletinom",
+		"slika":"img/restorani/novibeograd/pizzabar/SendvicPiletina.jpg",
+		"cena":590
+		},
+		{
+		"naziv":"Pasta sa piletinom i brokolijem",
+		"slika":"img/restorani/novibeograd/pizzabar/PiletinaBrokoli.jpg",
+		"cena":710
+		}
+	]
+}
