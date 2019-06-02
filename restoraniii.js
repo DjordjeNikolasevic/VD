@@ -7,7 +7,7 @@ data='[
 		"opstina":"Novi Beograd",
 		"adresa":"Bulevar Mihajla Pupina 165"
 		},
-	"slike":["img/restorani/novibeograd/pizzabar/1","img/restorani/novibeograd/pizzabar/2","img/restorani/novibeograd/pizzabar/3","img/restorani/novibeograd/pizzabar/4","img/restorani/novibeograd/pizzabar/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Udobno - neformalno - ukusna hrana",
 	"kratak opis":"Pizza Bar Novi Beograd je mesto koje odise pozitivnom energijom. Nudi vam najbolje italijanske i svestske specijalitete po dostupnoj ceni. Ukoliko ste pravi gurman, onda je ovo mesto za vas!",
 	"ocene":[],
@@ -33,7 +33,7 @@ data='[
 		"cena":890
 		},
 		{
-		"naziv":"Pizza Porketa",
+		"naziv":"Pizza Porketa"
 		"slika":"img/restorani/novibeograd/pizzabar/jela/Porketa.jpg",
 		"cena":910
 		},
@@ -63,7 +63,7 @@ data='[
 		"opstina":"Novi Beograd",
 		"adresa":"Bulevar Zorana Đinđića 6a"
 		},
-	"slike":["img/restorani/novibeograd/sushidream/1","img/restorani/novibeograd/sushidream/2","img/restorani/novibeograd/sushidream/3","img/restorani/novibeograd/sushidream/4","img/restorani/novibeograd/sushidream/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Formalno - riba - ukusna hrana",
 	"kratak opis":"Sushi Dream je jedan od retkih japanskih restorana u Beogradu kojim upravljaju sami Japanci. Otvoren je 1999. godine prvi put na prostoru Evrope a ubrzo zatim je zbog svog izvanrednog kvaliteta otvorio svoje lokale i kod nas. Narucite i okusite cari izvorne Japanske kuhinje odmah!",
 	"ocene":[],
@@ -115,7 +115,7 @@ data='[
 		"opstina":"Novi Beograd",
 		"adresa":"Tosin Bunar 216"
 		},
-	"slike":["img/restorani/novibeograd/dren/1","img/restorani/novibeograd/dren/2","img/restorani/novibeograd/dren/3","img/restorani/novibeograd/dren/4","img/restorani/novibeograd/dren/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Kafana - udobno - rostilj",
 	"kratak opis":"Kafana Dren je pravo mesto za vas ukoliko volite velike rostiljske porcije koje su izuzetnog kvaliteta. Pripremamo hranu na stare tradicioanlne nacine,naravno sa puno ljubavi.",
 	"ocene":[],
@@ -158,7 +158,7 @@ data='[
 		"opstina":"Stari grad",
 		"adresa":"Nemanjina 4"
 		},
-	"slike":["img/restorani/starigrad/haosfood/1","img/restorani/starigrad/haosfood/2","img/restorani/starigrad/haosfood/3","img/restorani/starigrad/haosfood/4","img/restorani/starigrad/haosfood/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Pizza - italijanska kuhinja - salate",
 	"kratak opis":"Oprobajte nase vrhunski obucene pica majstore. Raznovrsna italijanska kuhinja koja se nalazi samo klik od vas.",
 	"ocene":[],
@@ -205,7 +205,7 @@ data='[
 		"opstina":"Stari grad",
 		"adresa":"Strahinjića Bana 57"
 		},
-	"slike":["img/restorani/starigrad/walter/1","img/restorani/starigrad/walter/2","img/restorani/starigrad/walter/3","img/restorani/starigrad/walter/4","img/restorani/starigrad/walter/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Neformalno - ukusna hrana - rostilj",
 	"kratak opis":"Opste poznati Sarajevski cevap od skoro dostavlja i na vasa vrata. Probajte originalne stare recepte za cevape uz prilog po zelji!",
 	"ocene":[],
@@ -246,7 +246,7 @@ data='[
 		"opstina":"Vozdovac",
 		"adresa":"Milana Rakića 86g"
 		},
-	"slike":["img/restorani/vozdovac/obrok/1","img/restorani/vozdovac/obrok/2","img/restorani/vozdovac/obrok/3","img/restorani/vozdovac/obrok/4","img/restorani/vozdovac/obrok/5"],
+	"slike":["1","2","3","4","5"],
 	"informacije":"Neformalno - dijetalno - ukusno",
 	"kratak opis":"Ukoliko ste fit i trazite zdrav i ukusan obrok, ovo je mesto za vas. Uzivajte u raznim specijalitetima nakon iscrpljujuceg treninga i nadoknadite izgubljene kalorije!",
 	"ocene":[],
@@ -275,128 +275,6 @@ data='[
 		"naziv":"Vitaminska salata",
 		"slika":"img/restorani/vozdovac/obrok/jela/VitaminskaSalata.jpg",
 		"cena":680
-		}
-	]
-},
-
-{
-	"ime":"Restoran Kuhinja",
-	"tip hrane":["Rostilj","Salate"],
-	"lokacija":{
-		"grad":"Beograd",
-		"opstina":"Vozdovac",
-		"adresa":"Vojvode Stepe 93"
-		},
-	"slike":["img/restorani/vozdovac/kuhinja/1","img/restorani/vozdovac/kuhinja/2","img/restorani/vozdovac/kuhinja/3","img/restorani/vozdovac/kuhinja/4","img/restorani/vozdovac/kuhinja/5"],
-	"informacije":"Formalno - ziva muzika - ukusno",
-	"kratak opis":"Restoran kuhinja nudi vam klasicna jela svih vrsta. Nas kuvar dobtinik je prestizne Miselinove nagrade i opravdace vasa ocekivanja."
-	"ocene":[],
-	"jela":[
-		{
-		"naziv":"Domaća dimljena kobasica",
-		"slika":"img/restorani/vozdovac/kuhinja/jela/DomacaKobasica.jpg",
-		"cena":700
-		},
-		{
-		"naziv":"Pileca salata",
-		"slika":"img/restorani/vozdovac/kuhinja/jela/PilecaSalata.jpg",
-		"cena":660
-		},
-		{
-		"naziv":"Cezar salata",
-		"slika":"img/restorani/vozdovac/kuhinja/jela/CezarSalata.jpg",
-		"cena":640
-		},
-		{
-		"naziv":"Cevapi na kajmaku",
-		"slika":"img/restorani/vozdovac/kuhinja/jela/CevapiNaKajmaku.jpg",
-		"cena":730
-		},
-		{
-		"naziv":"Gurmanska vesalica",
-		"slika":"img/restorani/vozdovac/kuhnija/jela/GurmanskaVesalica.jpg",
-		"cena":840
-		}
-	]
-},
-
-{
-	"ime":"Makao",
-	"tip hrane":["Kineska hrana"],
-	"lokacija":{
-		"grad":"Beograd",
-		"opstina":"Zemun",
-		"adresa":"Prve pruge 8"
-		},
-	"slike":["img/restorani/zemun/makao/1","img/restorani/zemun/makao/2","img/restorani/zemun/makao/3","img/restorani/zemun/makao/4","img/restorani/zemun/makao/5"],
-	"informacije":"Neformalno - kineska hrana",
-	"kratak opis":"Ovde cete uzivati u kineskim specijalitetima. Slatko, kiselo, slano ili ljuto, nudimo vam svaki moguci ukus za svakog!"
-	"ocene":[],
-	"jela":[
-		{
-		"naziv":"Govedina u soja sosu",
-		"slika":"img/restorani/zemun/makao/jela/GovedinaSoja.jpg",
-		"cena":720
-		},
-		{
-		"naziv":"Piletina sa kikirikijem",
-		"slika":"img/restorani/zemun/makao/jela/PiletinaKikiriki.jpg",
-		"cena":710
-		},
-		{
-		"naziv":"Svinjetina u kamenica sosu",
-		"slika":"img/restorani/zemun/makao/jela/SvinjetinaKamenica.jpg",
-		"cena":850
-		},
-		{
-		"naziv":"Junetina sa kineskim pecurkama i bambusom",
-		"slika":"img/restorani/zemun/makao/jela/JunetinaPecurke.jpg",
-		"cena":730
-		},
-		{
-		"naziv":"Piletina na celicnoj ploci",
-		"slika":"img/restorani/zemun/makao/jela/PiletinaPloca.jpg",
-		"cena":840
-		}
-	]
-},
-{
-	"ime":"Saran",
-	"tip hrane":["Riba","Salate","Pasta"],
-	"lokacija":{
-		"grad":"Beograd",
-		"opstina":"Zemun",
-		"adresa":"Kej Oslobođenja 53"
-		},
-	"slike":["img/restorani/zemun/saran/1","img/restorani/zemun/saran/2","img/restorani/zemun/saran/3","img/restorani/zemun/saran/4","img/restorani/zemun/saran/5"],
-	"informacije":"Formalno - plodovi mora - riba",
-	"kratak opis":"Uzivajte u vrhunskoj svezoj ribi i plodovima mora. Narucite svoj obrok za vreme Hvarskih, Peljeskih ili Istarskih dana i dozivite Mediteransku caroliju"
-	"ocene":[],
-	"jela":[
-		{
-		"naziv":"Fileti smudja",
-		"slika":"img/restorani/zemun/saran/jela/FiletiSmudja.jpg",
-		"cena":1450
-		},
-		{
-		"naziv":"Pasta sa plodovima mora",
-		"slika":"img/restorani/zemun/saran/jela/Pasta.jpg",
-		"cena":1380
-		},
-		{
-		"naziv":"Rizoto sa plodovima mora",
-		"slika":"img/restorani/zemun/saran/jela/Rizoto.jpg",
-		"cena":1240
-		},
-		{
-		"naziv":"Saran na mediteranski nacin",
-		"slika":"img/restorani/vozdovac/obrok/jela/Saran.jpg",
-		"cena":1320
-		},
-		{
-		"naziv":"Grilovani smudj",
-		"slika":"img/restorani/vozdovac/obrok/jela/Smudj.jpg",
-		"cena":1600
 		}
 	]
 }
