@@ -417,7 +417,7 @@
 			
 			if(localStorage.getItem("0")==null){
 				for(var i=0;i<data.length;i++){
-					localStorage.setItem(i,data[i]);
+					localStorage.setItem(i,JSON.stringify(data[i]));
 				}
 			}
 

@@ -8,9 +8,55 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		function load(){
+			var start=0;
+			first=JSON.parse(localStorage.getItem(start+""));
+			second=JSON.parse(localStorage.getItem(start+1));
+			third=JSON.parse(localStorage.getItem(start+2));
+			document.getElementById("slika1").src="../../"+first.slike[0];
+			document.getElementById("link1").href="../straniceRestorani/"+first.ime+".html";
+			document.getElementById("h1").innerHTML=first.ime;
+			document.getElementById("telo1").innerHTML=first["kratak opis"];
+			var prosek=0;
+			for(var i=0;i<first.ocene.length;i++){
+				prosek+=first.ocene[i];
+			}
+			if(first.ocene.length==0)
+				prosek=0;
+			else prosek/=first.ocene.length;
+			document.getElementById("ocena1").innerHTML=prosek;
+			
+			document.getElementById("slika2").src="../../"+second.slike[0];
+			document.getElementById("link2").href="../straniceRestorani/"+second.ime+".html";
+			document.getElementById("h2").innerHTML=second.ime;
+			document.getElementById("telo2").innerHTML=second["kratak opis"];
+			var prosek=0;
+			for(var i=0;i<second.ocene.length;i++){
+				prosek+=second.ocene[i];
+			}
+			if(second.ocene.length==0)
+				prosek=0;
+			else prosek/=second.ocene.length;
+			document.getElementById("ocena2").innerHTML=prosek;
+			
+			document.getElementById("slika3").src="../../"+third.slike[0];
+			document.getElementById("link3").href="../straniceRestorani/"+third.ime+".html";
+			document.getElementById("h3").innerHTML=third.ime;
+			document.getElementById("telo3").innerHTML=third["kratak opis"];
+			var prosek=0;
+			for(var i=0;i<third.ocene.length;i++){
+				prosek+=third.ocene[i];
+			}
+			if(third.ocene.length==0)
+				prosek=0;
+			else prosek/=third.ocene.length;
+			document.getElementById("ocena3").innerHTML=prosek;
+		}	
+	</script>
 </head>
 
-<body style="background-image: url('../../img/background.jpg')">
+<body style="background-image: url('../../img/background.jpg')" onload="load()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="../../index.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -63,40 +109,46 @@
 		<div class="col-sm-9">
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid">
+					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid" id="slika1">
 				</div>
 				<div class="col-sm-6">
-					<h3 class="text-primary text-center">Pizza Bar</h3><br>
+					<a id="link1"><h3 class="text-primary text-center" id="h1">Pizza Bar</h3></a><br>
 					<font size="3">
+					<div id="telo1">
 					Udobno-neformalno-ukusna hrana<br>
 					Bulevar Mihajla Pupina 165<br>
+					</div>
 					Ocena: <div style="display:inline" id="ocena1">4</div>/5
 					</font>
 				</div>
 			</div>
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid">
+					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid" id="slika2">
 				</div>
 				<div class="col-sm-6">
-					<h3 class="text-primary text-center">Pizza Bar</h3><br>
+					<a id="link2"><h3 class="text-primary text-center" id="h2">Pizza Bar</h3></a><br>
 					<font size="3">
+					<div id="telo2">
 					Udobno-neformalno-ukusna hrana<br>
 					Bulevar Mihajla Pupina 165<br>
-					Ocena: <div style="display:inline" id="ocena1">4</div>/5
+					</div>
+					Ocena: <div style="display:inline" id="ocena2">4</div>/5
 					</font>
 				</div>
 			</div>
 			<div class="row mb-2">
 				<div class="col-sm-6">
-					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid">
+					<img src="../../img/restorani/novibeograd/pizzabar/1.jpg" class="img-fluid" id="slika3">
 				</div>
 				<div class="col-sm-6">
-					<h3 class="text-primary text-center">Pizza Bar</h3><br>
+					<a id="link3"><h3 class="text-primary text-center" id="h3">Dren</h3></a><br>
 					<font size="3">
-					Udobno-neformalno-ukusna hrana<br>
+					<div id="telo3">
+					Kafana - udobno - rostilj<br>
 					Bulevar Mihajla Pupina 165<br>
-					Ocena: <div style="display:inline" id="ocena1">4</div>/5
+					</div>
+					Ocena: <div style="display:inline" id="ocena3">4</div>/5
 					</font>
 				</div>
 			</div>
