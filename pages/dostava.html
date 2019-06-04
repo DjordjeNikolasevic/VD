@@ -10,7 +10,94 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script>
+
+  function compareRejting1( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    rejting1=0;
+    broj1=0;
+    sum1=0;
+    for (i=0;i<a['ocene'].length;i++){
+      broj1++;
+      sum1=sum1+a['ocene'][i];
+    }
+    if (broj1>0) rejting=sum1/broj1;
+    else rejting1=0;
+
+    rejting2=0;
+    broj2=0;
+    sum2=0;
+    for (i=0;i<b['ocene'].length;i++){
+      broj2++;
+      sum2=sum2+a['ocene'][i];
+    }
+    if (broj2>0) rejting=sum2/broj2;
+    else rejting2=0;
+
+    if (rejting1>=rejting2) return -1;
+    else return 1;
+  }
+
+  function compareRejting2( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    rejting1=0;
+    broj1=0;
+    sum1=0;
+    for (i=0;i<a['ocene'].length;i++){
+      broj1++;
+      sum1=sum1+a['ocene'][i];
+    }
+    if (broj1>0) rejting=sum1/broj1;
+    else rejting1=0;
+
+    rejting2=0;
+    broj2=0;
+    sum2=0;
+    for (i=0;i<b['ocene'].length;i++){
+      broj2++;
+      sum2=sum2+a['ocene'][i];
+    }
+    if (broj2>0) rejting=sum2/broj2;
+    else rejting2=0;
+
+    if (rejting1>=rejting2) return 1;
+    else return -1;
+  }
+
+  function compareIme1( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    if (a['ime']>b['ime']) return -1;
+    else return 1;
+  }
+
+  function compareIme2( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    if (a['ime']>b['ime']) return 1;
+    else return -1;
+  }
+
+  function compareLokacija1( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    if (a['lokacija']['opstina']>b['lokacija']['opstina']) return -1;
+    else if (a['lokacija']['adresa']>b['lokacija']['adresa']) return -1;
+    else return 1;
+  }
+
+  function compareLokacija2( c, d ) {
+    a=JSON.parse(localStorage.getItem(c));
+    b=JSON.parse(localStorage.getItem(d));
+    if (a['lokacija']['opstina']>b['lokacija']['opstina']) return 1;
+    else if (a['lokacija']['adresa']>b['lokacija']['adresa']) return 1;
+    else return -1;
+  }
+
     function filter(){
+      var niz=new Array();
+      document.getElementById("cardina").style.backgroundColor = "transparent";
       document.getElementById("cardina").innerHTML="";
       for (i=0;i<9;i++){
         var objekat=JSON.parse(localStorage.getItem(i));
@@ -20,20 +107,222 @@
             checkBox = document.getElementById("customCheck"+j);
             if (checkBox.checked==true && objekat['tip hrane'][k]==checkBox.getAttribute("name")){
               nasao=true;
-              stringara="";
-              stil="";
-              if (i==3 || i==4 || i==5){stringara="height=80% width=80%"
-              stil="padding-left:40px;";
-            }
-              else if (i==6){stringara="height=70% width=70%";
-            stil="padding-left:40px;";}
-              document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3>"+objekat['ime']+"</h3><h4>"+objekat['lokacija']['opstina']+" "+objekat['lokacija']['adresa']+"</h4><p>"+objekat['kratak opis']+"</p></div></div><hr>";
+              niz.push(i);
               break;
             }
           }
           if (nasao==true) break;
         }
       }
+if (document.getElementById("customRadio4").checked==true){//OPADAJUCE
+  if (document.getElementById("customRadio1").checked==true){ //rejting
+    niz=niz.sort(compareRejting1);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    }
+  }
+  else if(document.getElementById("customRadio2").checked==true){ //lokacija
+    niz=niz.sort(compareLokacija1);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    }
+  }else{
+    niz=niz.sort(compareIme1);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    }
+
+  }
+}
+else{//RASTUCE
+
+  if (document.getElementById("customRadio1").checked==true){ //rejting
+    niz=niz.sort(compareRejting2);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    }
+  }
+  else if(document.getElementById("customRadio2").checked==true){ //lokacija
+    niz=niz.sort(compareLokacija2);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    }
+
+  }else{
+    niz=niz.sort(compareIme2);
+    for (i=0;i<niz.length;i++){
+      broj=niz[i];
+      var objekat=JSON.parse(localStorage.getItem(broj));
+      stringara="";
+      stil="";
+      if (broj==3 || broj==4 || broj==5){stringara="height=80% width=80%"
+      stil="padding-left:40px;";
+      }
+      else if (broj==6){stringara="height=70% width=70%";
+      stil="padding-left:40px;";}
+      document.getElementById("cardina").style.backgroundColor = "#FFFFFF";
+      tip="";
+      for (m=0;m<objekat['tip hrane'].length;m++){
+        tip=tip+"  "+objekat['tip hrane'][m];
+      }
+      brojocena=0;
+      zbirocena=0;
+      for (m=0;m<objekat['ocene'].length;m++){
+        brojocena=brojocena+1;
+        zbirocena=zbirocena+objekat['ocene'];
+      }
+      if (brojocena>0){
+        varprosek=zbirocena/brojocena;
+        stringocena=varprosek+"/5.00"
+      }
+      else{
+        stringocena="Restoran nije ocenjivan"
+      }
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+    } //naziv
+
+  }
+
+}
+
+
+
+
     }
   </script>
 </head>
@@ -86,7 +375,7 @@
     <div class="container" style="margin-top:30px; margin-bottom:30px;">
     <!--style="background-image: url('../img/background.jpg');background-repeat: no-repeat;background-size: cover;"-->
     <div class="row">
-      <div class="col-sm-12" style="margin-bottom:50px;"height="40px">
+      <div class="col-sm-12 col-md-12 col-lg-3" style="margin-bottom:50px;"height="40px">
         <div  align="center" style="background-color: rgba(0, 0, 0, 0.7);padding-bottom:30px; padding-top:30px;" >
           <h2><font color="white">Sta vam se jede danas?</font></h2>
           <table cellpadding="5">
@@ -103,6 +392,8 @@
         				  <label class="custom-control-label" for="customCheck2"><font color="white">Palacinke</font></label>
         				</div>
               </td>
+            </tr>
+            <tr>
               <td>
                 <div class="custom-control custom-checkbox d-inline">
         				  <input class="custom-control-input" name="Rostilj" type="checkbox" id="customCheck3" onchange="filter()">
@@ -115,20 +406,22 @@
         				  <label class="custom-control-label" for="customCheck4"><font color="white">Salate</font></label>
         				</div>
               </td>
-              <td>
-                <div class="custom-control custom-checkbox d-inline">
-        				  <input class="custom-control-input" name="Pasta" type="checkbox" id="customCheck5" onchange="filter()">
-        				  <label class="custom-control-label" for="customCheck5"><font color="white">Pasta</font></label>
-        				</div>
-              </td>
             </tr>
             <tr>
+              <td>
+                <div class="custom-control custom-checkbox d-inline">
+                  <input class="custom-control-input" name="Pasta" type="checkbox" id="customCheck5" onchange="filter()">
+                  <label class="custom-control-label" for="customCheck5"><font color="white">Pasta</font></label>
+                </div>
+              </td>
               <td>
                 <div class="custom-control custom-checkbox d-inline">
         				  <input class="custom-control-input" name="Sendvici" type="checkbox" id="customCheck6" onchange="filter()">
         				  <label class="custom-control-label" for="customCheck6"><font color="white">Sendvici</font></label>
         				</div>
               </td>
+            </tr>
+            <tr>
               <td>
                 <div class="custom-control custom-checkbox d-inline">
         				  <input class="custom-control-input" name="Kineska hrana" type="checkbox" id="customCheck7" onchange="filter()">
@@ -141,6 +434,8 @@
         				  <label class="custom-control-label" for="customCheck8"><font color="white">Riba</font></label>
         				</div>
               </td>
+            </tr>
+            <tr>
               <td>
                 <div class="custom-control custom-checkbox d-inline">
         				  <input class="custom-control-input" name="Dorucak" type="checkbox" id="customCheck9" onchange="filter()">
@@ -154,17 +449,71 @@
         				</div>
               </td>
             </tr>
+            <tr>
+              <td>
+                <br>
+
+              </td>
+            </tr>
+            <tr>
+              <td><label class="label" for="customRadio15"><font color="white">Sortiraj po:</font></label></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked="" onclick="filter()">
+                  <label class="custom-control-label" for="customRadio1"><font color="white">Rejtingu</font></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" onclick="filter()">
+                  <label class="custom-control-label" for="customRadio2"><font color="white">Lokaciji</font></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input" onclick="filter()">
+                  <label class="custom-control-label" for="customRadio3"><font color="white">Nazivu</font></label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <br>
+
+              </td>
+            </tr>
+            <tr>
+              <td><label class="label" for="customRadio15"><font color="white">Sortiraj:</font></label></td>
+            </tr>
+            <tr>
+              <td>
+                <div class="custom-control custom-radio">
+                <input type="radio" id="customRadio4" name="customRadio21" class="custom-control-input" checked="" onclick="filter()">
+                <label class="custom-control-label" for="customRadio4"><font color="white">Opadajuce</font></label>
+                </div>
+              </td>
+              <td>
+                <div class="custom-control custom-radio">
+                  <input type="radio" id="customRadio5" name="customRadio21" class="custom-control-input" onclick="filter()">
+                  <label class="custom-control-label" for="customRadio5"><font color="white">Rastuce</font></label>
+                </div>
+              </td>
+            <tr>
           </table>
+        </div>
+      </div>
+      <div id="spoljasnja" class="col-sm-12 col-md-12 col-lg-9" style="background-color:'transparent'" >
+        <div class="card-body" id="cardina" style="background-color:'transparent'">
 
         </div>
       </div>
     </div>
-
- <div class="card" style="background-color:#FFFFFF">
-  <div class="card-body container" id="cardina">
-
-	</div>
-</div>
 </div>
 
 
