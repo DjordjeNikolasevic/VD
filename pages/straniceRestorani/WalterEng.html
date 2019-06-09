@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FastDelivery - Restoran Kuhinja</title>
+	<title>FastDelivery - Walter</title>
 	<link rel="stylesheet" href="../../css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script src="js/prevod.js"></script>
-	
+	<script src="../../js/prevod.js"></script>
+
 	<script>
 		function load(i){
 			var object=JSON.parse(localStorage.getItem(i));
@@ -44,12 +44,12 @@
 		}
 
 		function rating(i){
-			if(sessionStorage.getItem("6")==null){
-				var object=JSON.parse(localStorage.getItem("6"));
+			if(sessionStorage.getItem("4")==null){
+				var object=JSON.parse(localStorage.getItem("4"));
 				object.ocene.push(i);
-				localStorage.setItem("6",JSON.stringify(object));
-				load("6");
-				sessionStorage.setItem("6",true);
+				localStorage.setItem("4",JSON.stringify(object));
+				load("4");
+				sessionStorage.setItem("4",true);
 			}
 			else{
 				$("#message").css("visibility","visible");
@@ -61,7 +61,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/stars.css">
 </head>
 
-<body style="background-image: url('../../img/background.jpg')" onload="load('6')">
+<body style="background-image: url('../../img/background.jpg')" onload="load('4')">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="../../indexEng.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -71,7 +71,7 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto nav-pills nav">
-        <li class="nav-item ">
+        <li class="nav-item">
           <a class="nav-link" href="../../indexEng.html">Home</a>
         </li>
         <li class="nav-item dropdown active">
@@ -79,8 +79,8 @@
           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
             <a class="dropdown-item" href="../opstineRestorani/novibeogradEng.html">Novi Beograd <span class="sr-only">(current)</span></a>
             <a class="dropdown-item" href="../opstineRestorani/zemunEng.html">Zemun</a>
-            <a class="dropdown-item" href="../opstineRestorani/starigradEng.html">Stari grad</a>
-            <a class="dropdown-item active" href="../opstineRestorani/vozdovacEng.html">Vozdovac</a>
+            <a class="dropdown-item active" href="../opstineRestorani/starigradEng.html">Stari grad</a>
+            <a class="dropdown-item" href="../opstineRestorani/vozdovacEng.html">Vozdovac</a>
           </div>
         </li>
         <li class="nav-item">
@@ -93,8 +93,8 @@
           <a class="nav-link" href="../MojeNarudzbineEng.html">My orders</a>
         </li>
       </ul>
-      <a href="RestoranKuhinja.html" onclick="ucitajSrpski()"><img src="img/language/serbian.png" height="26px" width="40px" style="margin-right:10px" href="index.html"></a>
-      <a href="#"><img src="img/language/english.png" height="26px" width="40px" href="#"></a>
+      <a href="Walter.html" onclick="ucitajSrpski()"><img src="../../img/language/serbian.png" height="26px" width="40px" href="novibeograd.html" style="margin-right:10px"></a>
+      <a href="#"><img src="../../img/language/english.png" height="26px" width="40px" href="#"></a>
     </div>
   </nav>
 
@@ -102,10 +102,10 @@
     <div class="row">
       <div class="col-sm-12">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.html">Home</a></li>
+        <li class="breadcrumb-item"><a href="../../indexEng.html">Home</a></li>
 		<li class="breadcrumb-item active">Restaurants</li>
-		<li class="breadcrumb-item"><a href="../opstineRestorani/starigradEng.html">Vozdovac</a></li>
-        <li class="breadcrumb-item active">Restoran Kuhinja</li>
+		<li class="breadcrumb-item"><a href="../opstineRestorani/starigrad.html">Stari Grad</a></li>
+        <li class="breadcrumb-item active">Walter</li>
         </ol>
       </div>
     </div>

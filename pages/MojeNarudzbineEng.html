@@ -33,7 +33,7 @@
 				for(var j=0;j<niz[i].jela.length;j++){
 					jela+=niz[i].jela[j].naziv+"   "+niz[i].jela[j].cena+" RSD<br>";
 				}
-				str+="<div class='row mt-3'><div id='col"+i+"' class='col-sm-12'><h4>"+niz[i].imeRestorana+"</h4>"+jela+"Ukupno: "+niz[i].cena+" RSD<br>Datum: "+niz[i].datum+"</div><input type='button' class='mt-2' value='Download PDF' onclick='generatePdf("+i+")'></div>"
+				str+="<div class='row mt-3'><div id='col"+i+"' class='col-sm-12'><h4>"+niz[i].imeRestorana+"</h4>"+jela+"Total: "+niz[i].cena+" RSD<br>Date: "+niz[i].datum+"</div><input type='button' class='mt-2' value='Download PDF' onclick='generatePdf("+i+")'></div>"
 			}
 			document.getElementById("text").innerHTML=str;
 
@@ -73,7 +73,7 @@
           <a class="nav-link active" href="MojeNarudzbineEng.html">My orders</a>
         </li>
       </ul>
-      <a href="MojeNarudzbine.html" onclick="ucitajSrpski()"></a><img src="../img/language/serbian.png" height="26px" width="40px" href="novibeograd.html" style="margin-right:10px"></a>
+      <a href="MojeNarudzbine.html" onclick="ucitajSrpski()"><img src="../img/language/serbian.png" height="26px" width="40px" href="novibeograd.html" style="margin-right:10px"></a>
       <a href="#"><img src="../img/language/english.png" height="26px" width="40px" href="#"></a>
     </div>
   </nav>

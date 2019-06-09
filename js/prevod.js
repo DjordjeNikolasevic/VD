@@ -824,6 +824,29 @@ var	data=[
 				obj["jela"]=data[i].jela;
 				localStorage.setItem(i,JSON.stringify(obj));
 			}
+			
+			var niz=JSON.parse(sessionStorage.getItem("narudzbine"));
+			if(niz==null)
+				return;
+			for(var i=0;i<niz.length;i++){
+				var ime=niz[i].imeRestorana;
+				var index=-1;
+				for(var j=0;j<data2.length;j++){
+					if(data2[j].ime==ime){
+						index=j;
+						break;
+					}
+				}
+				for(var j=0;j<niz[i].jela.length;j++){
+					for(var z=0;z<data2[index].jela.length;z++){
+						if(data2[index].jela[z].naziv==niz[i].jela[j].naziv){
+							niz[i].jela[j].naziv=data[index].jela[z].naziv;
+							break;
+						}
+					}
+				}
+			}
+			sessionStorage.setItem("narudzbine",JSON.stringify(niz));
 		}
 		
 		function ucitajEngleski(){
@@ -838,4 +861,27 @@ var	data=[
 				obj["jela"]=data2[i].jela;
 				localStorage.setItem(i,JSON.stringify(obj));
 			}
+			
+			var niz=JSON.parse(sessionStorage.getItem("narudzbine"));
+			if(niz==null)
+				return;
+			for(var i=0;i<niz.length;i++){
+				var ime=niz[i].imeRestorana;
+				var index=-1;
+				for(var j=0;j<data.length;j++){
+					if(data[j].ime==ime){
+						index=j;
+						break;
+					}
+				}
+				for(var j=0;j<niz[i].jela.length;j++){
+					for(var z=0;z<data[index].jela.length;z++){
+						if(data[index].jela[z].naziv==niz[i].jela[j].naziv){
+							niz[i].jela[j].naziv=data2[index].jela[z].naziv;
+							break;
+						}
+					}
+				}
+			}
+			sessionStorage.setItem("narudzbine",JSON.stringify(niz));
 		}
