@@ -64,9 +64,9 @@
 				}
 				ocena/=firstRest.ocene.length;
 			}
-			document.getElementById("ocena1").innerHTML="Ocena: "+ocena+"/5.00";
+			document.getElementById("ocena1").innerHTML="Rating: "+ocena+"/5.00";
 			document.getElementById("naruc1").innerHTML=firstRest.informacije;
-			document.getElementById("naruc1").href="pages/straniceRestorani/"+firstRest.ime+".html";
+			document.getElementById("naruc1").href="pages/straniceRestorani/"+firstRest.ime+"Eng.html";
 			document.getElementById("opis1").innerHTML=firstRest["kratak opis"];
 			document.getElementById("img1").src=firstRest.slike[0];
 			
@@ -79,9 +79,9 @@
 				}
 				ocena/=secondRest.ocene.length;
 			}
-			document.getElementById("ocena2").innerHTML="Ocena: "+ocena+"/5.00";
+			document.getElementById("ocena2").innerHTML="Rating: "+ocena+"/5.00";
 			document.getElementById("naruc2").innerHTML=secondRest.informacije;
-			document.getElementById("naruc2").href="pages/straniceRestorani/"+secondRest.ime+".html";
+			document.getElementById("naruc2").href="pages/straniceRestorani/"+secondRest.ime+"Eng.html";
 			document.getElementById("opis2").innerHTML=secondRest["kratak opis"];
 			document.getElementById("img2").src=secondRest.slike[0];
 
@@ -93,9 +93,9 @@
 				}
 				ocena/=thirdRest.ocene.length;
 			}
-			document.getElementById("ocena3").innerHTML="Ocena: "+ocena+"/5.00";
+			document.getElementById("ocena3").innerHTML="Rating: "+ocena+"/5.00";
 			document.getElementById("naruc3").innerHTML=thirdRest.informacije;
-			document.getElementById("naruc3").href="pages/straniceRestorani/"+thirdRest.ime+".html";
+			document.getElementById("naruc3").href="pages/straniceRestorani/"+thirdRest.ime+"Eng.html";
 			document.getElementById("opis3").innerHTML=thirdRest["kratak opis"];
 			document.getElementById("img3").src=thirdRest.slike[0];
 
@@ -104,7 +104,7 @@
 	</script>
 </head>
 
-<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-attachment: fixed;" onload="ucitajSrpski();load()">
+<body style="background-image: url('img/background.jpg');background-repeat: no-repeat;background-attachment: fixed;" onload="ucitajEngleski();load()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="index.html"><img src="img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -118,7 +118,7 @@
           <a class="nav-link" href="index.html">Pocetna <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restorani</a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restaurants</a>
           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
             <a class="dropdown-item" href="pages/opstineRestorani/novibeograd.html">Novi Beograd</a>
             <a class="dropdown-item" href="pages/opstineRestorani/zemun.html">Zemun</a>
@@ -127,14 +127,14 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/dostava.html">Dostava</a>
+          <a class="nav-link" href="pages/dostava.html">Delivery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="pages/Onama.html">O nama</a>
+          <a class="nav-link" href="pages/Onama.html">About us</a>
         </li>
       </ul>
-      <a href="#"><img src="img/language/serbian.png" height="26px" width="40px" style="margin-right:10px" href="#"></a>
-      <a href="indexEng.html"><img src="img/language/english.png" height="26px" width="40px" href="indexEng.html"></a>
+      <a href="index.html"><img src="img/language/serbian.png" height="26px" width="40px" style="margin-right:10px" href="index.html" ></a>
+      <a href="#"><img src="img/language/english.png" height="26px" width="40px" href="#" onclick="ucitajEngleski();load()"></a>
     </div>
   </nav>
 
@@ -143,7 +143,7 @@
     <div class="row" style="margin-bottom:15px;">
       <div class="col-sm-12">
         <ol class="breadcrumb"> 
-        <li class="breadcrumb-item"><a href="index.html">Pocetna</a></li>
+        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
         <!--<li class="breadcrumb-item active">Library</li>-->
         </ol>
       </div>
@@ -151,9 +151,9 @@
     <div class="row">
       <div class="col-sm-12" style="margin-bottom:50px;"height="40px">
         <div  align="center" style="background-color: rgba(0, 0, 0, 0.7);padding-bottom:30px; padding-top:30px;" >
-          <h2><font color="white">Brzo, lako i jednostavno isporucujemo hranu na Vasu adresu!</font></h2>
-          <h3 class="lead"><font color="white">Porucite svoj obrok odmah</font></h3>
-          <a href="pages/dostava.html"><button type="button" class="btn btn-primary btn-lg" style="margin-top:30px">Dostava</button></a>
+          <h2><font color="white">We deliver our food to your home quickly and easily!</font></h2>
+          <h3 class="lead"><font color="white">Order your meal now</font></h3>
+          <a href="pages/dostava.html"><button type="button" class="btn btn-primary btn-lg" style="margin-top:30px">Delivery</button></a>
         </div>
       </div>
     </div>
@@ -163,7 +163,7 @@
 
     <div class="row">
       <div class="col-sm-12" height="40px">
-        <h3 align="center">Nasi najbolje ocenjeni restorani</h3>
+        <h3 align="center">Our best restaurants</h3>
       </div>
     </div>
 
@@ -173,7 +173,7 @@
         <h4 id="restoran1Naslov">Restoran 1</h4>
 		<img id="img1" class="img-fluid">
         <p id="ocena1">Ocena</p>
-        <a id="naruc1" href="pages/straniceRestorani/PizzaBar.html">Porucite odavde odmah!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
+        <a id="naruc1" href="pages/straniceRestorani/PizzaBar.html">Order from here now!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
 
         <p id="opis1" style="text-align:justify">OPIS1</p>
       </div>
@@ -181,7 +181,7 @@
         <h4 id="restoran2Naslov">Restoran 2</h4>
 		<img id="img2" class="img-fluid">
         <p id="ocena2">Ocena</p>
-        <a id="naruc2" href="pages/straniceRestorani/PizzaBar.html">Porucite odavde odmah!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
+        <a id="naruc2" href="pages/straniceRestorani/PizzaBar.html">Order from here now!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
 
         <p id="opis2" style="text-align:justify">OPIS1</p>
       </div>
@@ -189,7 +189,7 @@
         <h4 id="restoran3Naslov">Restoran 3</h4>
 		<img id="img3" class="img-fluid">
         <p id="ocena3">Ocena</p>
-        <a id="naruc3" href="pages/straniceRestorani/PizzaBar.html">Porucite odavde odmah!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
+        <a id="naruc3" href="pages/straniceRestorani/PizzaBar.html">Order from here now!</a> <!--OVO TREBA DA SE U JSU NAPRAVI I OVO JE CEO SKELET-->
 
         <p id="opis3" style="text-align:justify">OPIS1</p>
       </div>
@@ -200,7 +200,7 @@
   </div>
 </div>
 
-<footer class="page-footer font-small bg-primary pt-4">
+ <footer class="page-footer font-small bg-primary pt-4">
 
   <!-- Footer Links -->
   <div class="container-fluid text-center text-md-left">
@@ -212,13 +212,13 @@
       <div class="col-md-6 mt-md-0 mt-3 text-center">
 
         <!-- Content -->
-        <h5 class="text-uppercase text-white">Povezite se sa nama</h5>
+        <h5 class="text-uppercase text-white">Connect with us</h5>
 
 			<a href="https://www.facebook.com/djordje.nikolasevic"><img src="img/facebook.png" class="rounded-circle" width="48px" height="48px"></a>
 			<a href="https://www.instagram.com"><img src="img/instagram.png" width="50px" height="50px"></a>
 			<a href="https://www.twitter.com"><img src="img/twiter.png" class="rounded-circle" width="50px" height="50px"></a>
 
-		<p class="mt-3 text-white">Kontakt: +381638068154</p>
+		<p class="mt-3 text-white">Contact: +381638068154</p>
       </div>
 
 
@@ -230,7 +230,7 @@
       <div class="col-md-6 mb-md-0 mb-3 text-center">
 
         <!-- Links -->
-        <h5 class="text-uppercase text-white">Nasi partneri</h5>
+        <h5 class="text-uppercase text-white">Our partners</h5>
 
         <ul class="list-unstyled">
           <li>
@@ -255,7 +255,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3 text-white " style="color:#FF4500">
-	© Copyright 2019:Đorđe Nikolaševic i Marko Vekaric, Odsek za softversko inzenjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+	© Copyright 2019:Đorđe Nikolaševic i Marko Vekaric, Department of software engineering in School of Electrical Engineering on Belgrade University
   </div>
   <!-- Copyright -->
 
