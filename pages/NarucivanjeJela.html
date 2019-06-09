@@ -31,13 +31,8 @@
           narudzbina.cena=narudzbina.cena+parseInt(nizjela[i]["cena"]);
         }
       }
-      item=JSON.parse(sessionStorage.getItem("narudzbine"));
-      if (item==null){
-        sessionStorage.setItem("narudzbine",JSON.stringify(new Array()));
-      }
-      niz=JSON.parse(sessionStorage.getItem("narudzbine"));
-      niz.push(narudzbina);
-      sessionStorage.setItem("narudzbine",JSON.stringify(niz));
+      sessionStorage.setItem("trenutnaNarudzbina",JSON.stringify(narudzbina));
+      window.location.replace("kupovina.html");
     }
 
     function ubaciUKorpu(){
@@ -99,7 +94,7 @@
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../index.html">Pocetna</a></li>
         <li class="breadcrumb-item"><a href="dostava.html">Dostava</a></li>
-        <li class="breadcrumb-item active">NarucivanjeJela</li>
+        <li class="breadcrumb-item active">Narucivanje jela</li>
         </ol>
       </div>
     </div>
