@@ -114,7 +114,7 @@
 			second=niz[1];
 			third=niz[2];
 			document.getElementById("slika1").src="../../"+first.slike[0];
-			document.getElementById("link1").href="../straniceRestorani/"+first.ime+".html";
+			document.getElementById("link1").href="../straniceRestorani/"+first.ime+"Eng.html";
 			document.getElementById("h1").innerHTML=first.ime;
 			document.getElementById("adresa1").innerHTML=first.lokacija.adresa+" - "+first.lokacija.opstina;
 			var kategorije=first["tip hrane"][0];
@@ -132,7 +132,7 @@
 			document.getElementById("ocena1").innerHTML=prosek;
 
 			document.getElementById("slika2").src="../../"+second.slike[0];
-			document.getElementById("link2").href="../straniceRestorani/"+second.ime+".html";
+			document.getElementById("link2").href="../straniceRestorani/"+second.ime+"Eng.html";
 			document.getElementById("h2").innerHTML=second.ime;
 			document.getElementById("adresa2").innerHTML=second.lokacija.adresa+" - "+second.lokacija.opstina;
 			var kategorije=second["tip hrane"][0];
@@ -150,7 +150,7 @@
 			document.getElementById("ocena2").innerHTML=prosek;
 
 			document.getElementById("slika3").src="../../"+third.slike[0];
-			document.getElementById("link3").href="../straniceRestorani/"+third.ime+".html";
+			document.getElementById("link3").href="../straniceRestorani/"+third.ime+"Eng.html";
 			document.getElementById("h3").innerHTML=third.ime;
 			document.getElementById("adresa3").innerHTML=third.lokacija.adresa+" - "+third.lokacija.opstina;
 			var kategorije=third["tip hrane"][0];
@@ -173,7 +173,7 @@
 <body style="background-image: url('../../img/background.jpg')" onload="sortiraj()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <a class="navbar-brand" href="../../index.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
+    <a class="navbar-brand" href="../../indexEng.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -181,29 +181,29 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto nav-pills nav">
         <li class="nav-item">
-          <a class="nav-link" href="../../index.html">Pocetna</a>
+          <a class="nav-link" href="../../indexEng.html">Home</a>
         </li>
         <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restorani<span class="sr-only">(current)</span></a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restaurants<span class="sr-only">(current)</span></a>
           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
-            <a class="dropdown-item active" href="novibeograd.html">Novi Beograd <span class="sr-only">(current)</span></a>
-            <a class="dropdown-item" href="zemun.html">Zemun</a>
-            <a class="dropdown-item" href="starigrad.html">Stari grad</a>
-            <a class="dropdown-item" href="vozdovac.html">Vozdovac</a>
+            <a class="dropdown-item active" href="novibeogradEng.html">Novi Beograd <span class="sr-only">(current)</span></a>
+            <a class="dropdown-item" href="zemunEng.html">Zemun</a>
+            <a class="dropdown-item" href="starigradEng.html">Stari grad</a>
+            <a class="dropdown-item" href="vozdovacEng.html">Vozdovac</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../dostava.html">Dostava</a>
+          <a class="nav-link" href="../dostavaEng.html">Delivery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../Onama.html">O nama</a>
+          <a class="nav-link" href="../OnamaEng.html">About</a>
         </li>
 				<li class="nav-item">
-          <a class="nav-link" href="../MojeNarudzbine.html">Moje narudzbine</a>
+          <a class="nav-link" href="../MojeNarudzbineEng.html">My orders</a>
         </li>
       </ul>
-      <a href="#"><img src="../../img/language/serbian.png" height="26px" width="40px" style="margin-right:10px"></a>
-      <a href="novibeogradEng.html" onclick="ucitajEngleski()"><img src="../../img/language/english.png" height="26px" width="40px"></a>
+      <a href="novibeograd.html" onclick="ucitajSrpski()"><img src="../../img/language/serbian.png" height="26px" width="40px" style="margin-right:10px"></a>
+      <a href="#"><img src="../../img/language/english.png" height="26px" width="40px"></a>
     </div>
   </nav>
 
@@ -211,8 +211,8 @@
     <div class="row">
       <div class="col-sm-12">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.html">Pocetna</a></li>
-		<li class="breadcrumb-item active">Restorani</li>
+        <li class="breadcrumb-item"><a href="../../indexEng.html">Home</a></li>
+		<li class="breadcrumb-item active">Restaurants</li>
         <li class="breadcrumb-item active">Novi Beograd</li>
         </ol>
       </div>
@@ -292,22 +292,22 @@
 		</div>
 		<hr>
 		<div class="col-sm-3" style="border-left: 1px solid red">
-			<h3 class="text-primary text-center">Sortiranje po</h3><br>
+			<h3 class="text-primary text-center">Sort by</h3><br>
 			<div class="row-sm-3">
 				<div class="col-sm-6">
 					<font size="3">
 					<div class="form-group">
 						<div class="custom-control custom-radio">
 						  <input name="customRadio" class="custom-control-input" id="ime" type="radio" checked="">
-						  <label class="custom-control-label" for="ime">Imenu</label>
+						  <label class="custom-control-label" for="ime">Name</label>
 						</div>
 						<div class="custom-control custom-radio">
 						  <input name="customRadio" class="custom-control-input" id="lokacija" type="radio">
-						  <label class="custom-control-label" for="lokacija">Lokaciji</label>
+						  <label class="custom-control-label" for="lokacija">Location</label>
 						</div>
 						<div class="custom-control custom-radio">
 						  <input name="customRadio" class="custom-control-input" id="ocena" type="radio">
-						  <label class="custom-control-label" for="ocena">Oceni</label>
+						  <label class="custom-control-label" for="ocena">Rate</label>
 						</div>
 
 					 </div>
@@ -318,11 +318,11 @@
 					<div class="form-group">
 						<div class="custom-control custom-radio">
 						  <input name="customRadio2" class="custom-control-input" id="rastuce" type="radio" checked="">
-						  <label class="custom-control-label" for="rastuce">Opadajuce</label>
+						  <label class="custom-control-label" for="rastuce">Descending</label>
 						</div>
 						<div class="custom-control custom-radio">
 						  <input name="customRadio2" class="custom-control-input" id="opadajuce" type="radio">
-						  <label class="custom-control-label" for="opadajuce">Rastuce</label>
+						  <label class="custom-control-label" for="opadajuce">Ascending</label>
 						</div>
 						<div class="text-center">
 							<input class="btn btn-primary mt-2" type="button" onclick="sortiraj()" value="Submit">
@@ -353,13 +353,13 @@
       <div class="col-md-6 mt-md-0 mt-3 text-center">
 
         <!-- Content -->
-        <h5 class="text-uppercase text-white">Povezite se sa nama</h5>
+        <h5 class="text-uppercase text-white">Connect with us</h5>
 
 			<a href="https://www.facebook.com/djordje.nikolasevic"><img src="../../img/facebook.png" class="rounded-circle" width="48px" height="48px"></a>
 			<a href="https://www.instagram.com"><img src="../../img/instagram.png" width="50px" height="50px"></a>
 			<a href="https://www.twitter.com"><img src="../../img/twiter.png" class="rounded-circle" width="50px" height="50px"></a>
 
-		<p class="mt-3 text-white">Kontakt: +381638068154</p>
+		<p class="mt-3 text-white">Contact: +381638068154</p>
       </div>
 
 
@@ -371,7 +371,7 @@
       <div class="col-md-6 mb-md-0 mb-3 text-center">
 
         <!-- Links -->
-        <h5 class="text-uppercase text-white">Nasi partneri</h5>
+        <h5 class="text-uppercase text-white">Our partners</h5>
 
         <ul class="list-unstyled">
           <li>
@@ -396,7 +396,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3 text-white " style="color:#FF4500">
-	© Copyright 2019:Đorđe Nikolaševic i Marko Vekaric, Odsek za softversko inzenjerstvo Elektrotehničkog fakulteta Univerziteta u Beogradu
+	© Copyright 2019:Đorđe Nikolaševic i Marko Vekaric, Department of software engineering in School of Electrical Engineering on Belgrade University
   </div>
   <!-- Copyright -->
 
