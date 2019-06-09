@@ -18,21 +18,28 @@
       }
     }
     function idiNaPlacanje(){
+      var selektovanoNesto = false;
       var restoran=JSON.parse(localStorage.getItem("restoran"));
       var nizjela=restoran["jela"];
       var suma=0;
+      var datum=new Date();
       var narudzbina= {"imeRestorana":restoran["ime"],
       "jela":[],
-      "cena":0
+      "cena":0,
+      "datum":datum
     }
       for (i=0;i<nizjela.length;i++){
         if (document.getElementById("customCheck"+i).checked==true){
           narudzbina.jela.push(nizjela[i]);
+          selektovanoNesto=true;
           narudzbina.cena=narudzbina.cena+parseInt(nizjela[i]["cena"]);
         }
       }
-      sessionStorage.setItem("trenutnaNarudzbina",JSON.stringify(narudzbina));
-      window.location.replace("kupovina.html");
+      if (selektovanoNesto==true){
+        sessionStorage.setItem("trenutnaNarudzbina",JSON.stringify(narudzbina));
+        window.location.replace("kupovina.html");
+      }
+      else alert("Morate poruciti neko jelo.")
     }
 
     function ubaciUKorpu(){
