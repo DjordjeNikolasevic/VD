@@ -8,7 +8,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="../../js/prevod.js"></script>
 	<script>
 		function load(i){
 			var object=JSON.parse(localStorage.getItem(i));
@@ -63,7 +63,7 @@
 <body style="background-image: url('../../img/background.jpg')" onload="load('2')">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-    <a class="navbar-brand" href="../../index.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
+    <a class="navbar-brand" href="../../indexEng.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -71,29 +71,29 @@
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto nav-pills nav">
         <li class="nav-item ">
-          <a class="nav-link" href="../../index.html">Pocetna</a>
+          <a class="nav-link" href="../../indexEng.html">Home</a>
         </li>
         <li class="nav-item dropdown active">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restorani<span class="sr-only">(current)</span></a>
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Restaurants<span class="sr-only">(current)</span></a>
           <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 48px, 0px);">
-            <a class="dropdown-item active" href="../opstineRestorani/novibeograd.html">Novi Beograd <span class="sr-only">(current)</span></a>
-            <a class="dropdown-item" href="../opstineRestorani/zemun.html">Zemun</a>
-            <a class="dropdown-item" href="../opstineRestorani/starigrad.html">Stari grad</a>
-            <a class="dropdown-item" href="../opstineRestorani/vozdovac.html">Vozdovac</a>
+            <a class="dropdown-item active" href="../opstineRestorani/novibeogradEng.html">Novi Beograd <span class="sr-only">(current)</span></a>
+            <a class="dropdown-item" href="../opstineRestorani/zemunEng.html">Zemun</a>
+            <a class="dropdown-item" href="../opstineRestorani/starigradEng.html">Stari grad</a>
+            <a class="dropdown-item" href="../opstineRestorani/vozdovacEng.html">Vozdovac</a>
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../dostava.html">Dostava</a>
+          <a class="nav-link" href="../dostavaEng.html">Delivery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../Onama.html">O nama</a>
+          <a class="nav-link" href="../OnamaEng.html">About</a>
         </li>
 				<li class="nav-item">
           <a class="nav-link" href="../MojeNarudzbineEng.html">My orders</a>
         </li>
       </ul>
-      <img src="../../img/language/serbian.png" height="26px" width="40px" href="novibeograd.html" style="margin-right:10px">
-      <img src="../../img/language/english.png" height="26px" width="40px" href="#">
+      <a href="Dren.html" onclick="ucitajSrpski()"><img src="../../img/language/serbian.png" height="26px" width="40px" style="margin-right:10px"></a>
+      <a href="#"><img src="../../img/language/english.png" height="26px" width="40px"></a>
     </div>
   </nav>
 
@@ -101,9 +101,9 @@
     <div class="row">
       <div class="col-sm-12">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../index.html">Pocetna</a></li>
+        <li class="breadcrumb-item"><a href="../../indexEng.html">Pocetna</a></li>
 		<li class="breadcrumb-item active">Restorani</li>
-		<li class="breadcrumb-item"><a href="../opstineRestorani/novibeograd.html">Novi Beograd</a></li>
+		<li class="breadcrumb-item"><a href="../opstineRestorani/novibeogradEng.html">Novi Beograd</a></li>
         <li class="breadcrumb-item active">Dren</li>
         </ol>
       </div>
