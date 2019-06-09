@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FastDelivery - Pizza Bar</title>
+	<title>FastDelivery - Walter</title>
 	<link rel="stylesheet" href="../../css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -43,12 +43,12 @@
 		}
 
 		function rating(i){
-			if(sessionStorage.getItem("0")==null){
-				var object=JSON.parse(localStorage.getItem("0"));
+			if(sessionStorage.getItem("4")==null){
+				var object=JSON.parse(localStorage.getItem("4"));
 				object.ocene.push(i);
-				localStorage.setItem("0",JSON.stringify(object));
-				load("0");
-				sessionStorage.setItem("0",true);
+				localStorage.setItem("4",JSON.stringify(object));
+				load("4");
+				sessionStorage.setItem("4",true);
 			}
 			else{
 				$("#message").css("visibility","visible");
@@ -60,7 +60,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/stars.css">
 </head>
 
-<body style="background-image: url('../../img/background.jpg')" onload="load('0')">
+<body style="background-image: url('../../img/background.jpg')" onload="load('4')">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="../../index.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -100,8 +100,8 @@
         <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="../../index.html">Pocetna</a></li>
 		<li class="breadcrumb-item active">Restorani</li>
-		<li class="breadcrumb-item"><a href="../opstineStranice/novibeograd.html">Novi Beograd</a></li>
-        <li class="breadcrumb-item active">Pizza Bar</li>
+		<li class="breadcrumb-item"><a href="../opstineRestorani/novibeograd.html">Novi Beograd</a></li>
+        <li class="breadcrumb-item active">Walter</li>
         </ol>
       </div>
     </div>
@@ -208,12 +208,10 @@
 				<div class="carousel-item"style="height: 500px;">
 				  <img class="d-block w-100 img-fluid" id="img3" style="position: absolute;top: 0;left: 0;min-height: 300px;">
 				</div>
-			  </div>
-			  <div class="carousel-item"style="height: 500px;">
+				<div class="carousel-item"style="height: 500px;">
 				  <img class="d-block w-100 img-fluid" id="img4" style="position: absolute;top: 0;left: 0;min-height: 300px;">
 				</div>
-			  </div>
-			  <div class="carousel-item"style="height: 500px;">
+				<div class="carousel-item"style="height: 500px;">
 				  <img class="d-block w-100 img-fluid" id="img5" style="position: absolute;top: 0;left: 0;min-height: 300px;">
 				</div>
 			  </div>
