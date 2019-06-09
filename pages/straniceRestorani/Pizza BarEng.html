@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FastDelivery - Dren</title>
+	<title>FastDelivery - Pizza Bar</title>
 	<link rel="stylesheet" href="../../css/theme.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -43,12 +43,12 @@
 		}
 
 		function rating(i){
-			if(sessionStorage.getItem("2")==null){
-				var object=JSON.parse(localStorage.getItem("2"));
+			if(sessionStorage.getItem("0")==null){
+				var object=JSON.parse(localStorage.getItem("0"));
 				object.ocene.push(i);
-				localStorage.setItem("2",JSON.stringify(object));
-				load("2");
-				sessionStorage.setItem("2",true);
+				localStorage.setItem("0",JSON.stringify(object));
+				load("0");
+				sessionStorage.setItem("0",true);
 			}
 			else{
 				$("#message").css("visibility","visible");
@@ -60,7 +60,7 @@
 	<link rel="stylesheet" type="text/css" href="../../css/stars.css">
 </head>
 
-<body style="background-image: url('../../img/background.jpg')" onload="load('2')">
+<body style="background-image: url('../../img/background.jpg')" onload="load('0')">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="../../indexEng.html"><img src="../../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -70,7 +70,7 @@
 
     <div class="collapse navbar-collapse" id="navbarColor01">
       <ul class="navbar-nav mr-auto nav-pills nav">
-        <li class="nav-item ">
+        <li class="nav-item">
           <a class="nav-link" href="../../indexEng.html">Home</a>
         </li>
         <li class="nav-item dropdown active">
@@ -92,8 +92,8 @@
           <a class="nav-link" href="../MojeNarudzbineEng.html">My orders</a>
         </li>
       </ul>
-      <a href="Dren.html" onclick="ucitajSrpski()"><img src="../../img/language/serbian.png" height="26px" width="40px" style="margin-right:10px"></a>
-      <a href="#"><img src="../../img/language/english.png" height="26px" width="40px"></a>
+      <a href="Pizza Bar.html" onclick="ucitajSrpski()"><img src="../../img/language/serbian.png" height="26px" width="40px"  style="margin-right:10px"></a>
+      <a href="#"><img src="../../img/language/english.png" height="26px" width="40px" ></a>
     </div>
   </nav>
 
@@ -101,10 +101,10 @@
     <div class="row">
       <div class="col-sm-12">
         <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="../../indexEng.html">Homea</a></li>
-		<li class="breadcrumb-item active">Restaurants</li>
-		<li class="breadcrumb-item"><a href="../opstineRestorani/novibeogradEng.html">Novi Beograd</a></li>
-        <li class="breadcrumb-item active">Dren</li>
+        <li class="breadcrumb-item"><a href="../../indexEng.html">Home</a></li>
+				<li class="breadcrumb-item active">Restaurants</li>
+				<li class="breadcrumb-item"><a href="../opstineRestorani/novibeogradEng.html">Novi Beograd</a></li>
+        <li class="breadcrumb-item active">Pizza Bar</li>
         </ol>
       </div>
     </div>
@@ -118,20 +118,20 @@
 			<div class="col-sm-6 text-center">
 					 <div class="row">
 				<div class="col-sm-12 text-center">
-					<h1 id="naziv">Heading</h2>
+					<h1 id="naziv">Title</h2>
 
 				</div>
 			</div>
 
 			<div class="row mt-3">
 				<div class="col-sm-12 text-center">
-					<h3 id="info">Heading</h3>
+					<h3 id="info">Title</h3>
 
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-sm-12 text-center">
-					<h4 id="opis">Heading</h4>
+					<h4 id="opis">Title</h4>
 
 				</div>
 			</div>
@@ -168,7 +168,7 @@
 
 			<div class="row mt-3">
 				<div class="col-sm-12 text-center">
-					<h4 id="ocena" align="left">Heading</h4>
+					<h4 id="ocena" align="left">Title</h4>
 
 				</div>
 			</div>
