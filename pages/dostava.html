@@ -11,6 +11,10 @@
 
   <script>
 
+  function stranicaJela(objekat) {
+    localStorage.setItem("restoran",localStorage.getItem(objekat));
+  }
+
   function compareRejting1( c, d ) {
     a=JSON.parse(localStorage.getItem(c));
     b=JSON.parse(localStorage.getItem(d));
@@ -145,7 +149,7 @@ if (document.getElementById("customRadio4").checked==true){//OPADAJUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     }
   }
   else if(document.getElementById("customRadio2").checked==true){ //lokacija
@@ -178,7 +182,7 @@ if (document.getElementById("customRadio4").checked==true){//OPADAJUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     }
   }else{
     niz=niz.sort(compareIme1);
@@ -210,7 +214,7 @@ if (document.getElementById("customRadio4").checked==true){//OPADAJUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     }
 
   }
@@ -247,7 +251,7 @@ else{//RASTUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     }
   }
   else if(document.getElementById("customRadio2").checked==true){ //lokacija
@@ -280,7 +284,7 @@ else{//RASTUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     }
 
   }else{
@@ -313,7 +317,7 @@ else{//RASTUCE
       else{
         stringocena="Restoran nije ocenjivan"
       }
-      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='"+objekat['ime']+".html'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
+      document.getElementById("cardina").innerHTML=document.getElementById("cardina").innerHTML+"<div class='row'><div class='col-sm-4'><img class='img-fluid'"+stringara+" style='margin-bottom:15px;"+stil+"'src='../"+objekat['slike'][0]+"'></div><div class='col-sm-8'><h3><a href='NarucivanjeJela.html' onclick='stranicaJela("+niz[i]+")'>"+objekat['ime']+"</a></h3><h4>"+objekat['lokacija']['opstina']+", "+objekat['lokacija']['adresa']+"</h4><p>" + tip +"</p><p>"+stringocena+"</p></div></div><hr>";
     } //naziv
 
   }

@@ -144,7 +144,7 @@ data='[
 		"naziv":"Telece pecenje",
 		"slika":"img/restorani/novibeograd/dren/jela/TelecePecenje.jpg",
 		"cena":670
-		}	
+		}
 	]
 },
 
@@ -314,7 +314,7 @@ data='[
 		},
 		{
 		"naziv":"Gurmanska vesalica",
-		"slika":"img/restorani/vozdovac/kuhnija/jela/GurmanskaVesalica.jpg",
+		"slika":"img/restorani/vozdovac/kuhinja/jela/GurmanskaVesalica.jpg",
 		"cena":840
 		}
 	]
