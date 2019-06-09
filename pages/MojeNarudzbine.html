@@ -12,7 +12,7 @@
 
 	<script>
 		function generatePdf(i){
-			var doc = new jsPDF();          
+			var doc = new jsPDF();
 			var source = document.getElementById("col"+i);
 			doc.fromHTML(
 				source,
@@ -24,7 +24,7 @@
 
 			doc.save("test");
 		}
-		
+
 		function load(){
 			var niz=JSON.parse(sessionStorage.getItem("narudzbine"));
 			var str="";
@@ -36,7 +36,7 @@
 				str+="<div class='row mt-3'><div id='col"+i+"' class='col-sm-12'><h4>"+niz[i].imeRestorana+"</h4>"+jela+"Ukupno: "+niz[i].cena+" RSD<br>Datum: "+niz[i].datum+"</div><input type='button' class='mt-2' value='Download PDF' onclick='generatePdf("+i+")'></div>"
 			}
 			document.getElementById("text").innerHTML=str;
-			
+
 		}
 	</script>
 </head>
@@ -69,9 +69,12 @@
         <li class="nav-item">
           <a class="nav-link" href="../Onama.html">O nama</a>
         </li>
+				<li class="nav-item">
+          <a class="nav-link active" href="MojeNarudzbine.html">Moje narudzbine</a>
+        </li>
       </ul>
-      <img src="../img/language/serbian.png" height="26px" width="40px" href="novibeograd.html" style="margin-right:10px">
-      <img src="../img/language/english.png" height="26px" width="40px" href="#">
+      <img src="../img/language/serbian.png" height="26px" width="40px" href="MojeNarudzbine.html" style="margin-right:10px">
+      <img src="../img/language/english.png" height="26px" width="40px" href="MojeNarudzbineEng.html">
     </div>
   </nav>
 
@@ -90,7 +93,7 @@
   <div class="card-body ">
 
 	<div id="text"></div>
-    
+
 
   </div>
 
