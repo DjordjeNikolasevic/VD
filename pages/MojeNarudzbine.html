@@ -11,12 +11,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
 
 	<script>
-		function generatePdf(){
-			var doc = new jsPDF();
+		function generatePdf(i){
+			var doc = new jsPDF();          
+			var source = document.getElementById("col"+i);
+			doc.fromHTML(
+				source,
+				15,
+				15,
+				{
+				  'width': 180
+				});
 
-			doc.setFontSize(40);
-			doc.text(35, 25, 'Proba');
-			doc.save('test.pdf');
+			doc.save("test");
 		}
 		
 		function load(){
@@ -27,9 +33,10 @@
 				for(var j=0;j<niz[i].jela.length;j++){
 					jela+=niz[i].jela[j].naziv+"   "+niz[i].jela[j].cena+" RSD<br>";
 				}
-				str+="<div class='row'><div class='col-sm-12'><h4>"+niz[i].imeRestorana+"</h4>"+jela+"Ukupno: "+niz[i].cena+"</div></div>"
+				str+="<div class='row mt-3'><div id='col"+i+"' class='col-sm-12'><h4>"+niz[i].imeRestorana+"</h4>"+jela+"Ukupno: "+niz[i].cena+" RSD<br>Datum: "+niz[i].datum+"</div><input type='button' class='mt-2' value='Download PDF' onclick='generatePdf("+i+")'></div>"
 			}
 			document.getElementById("text").innerHTML=str;
+			
 		}
 	</script>
 </head>
@@ -83,7 +90,7 @@
   <div class="card-body ">
 
 	<div id="text"></div>
-    <input type="button" value="Download PDF" onclick="generatePdf()">
+    
 
   </div>
 
