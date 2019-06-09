@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+	<script src="../js/prevod.js"></script>
   <script>
 
   function stranicaJela(objekat) {
@@ -331,7 +331,7 @@ else{//RASTUCE
   </script>
 </head>
 
-<body style="background-image: url('../img/background.jpg');background-repeat: no-repeat;background-attachment: fixed;"onload="filter()">
+<body style="background-image: url('../img/background.jpg');background-repeat: no-repeat;background-attachment: fixed;"onload="ucitajfilter()">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
     <a class="navbar-brand" href="../indexEng.html"><img src="../img/logo2.png" width="130px" height="130px" alt="LOGO"> Fast Delivery</a>
@@ -360,8 +360,8 @@ else{//RASTUCE
           <a class="nav-link" href="OnamaEng.html">About</a>
         </li>
       </ul>
-      <img src="../img/language/serbian.png" height="26px" width="40px" href="dostava.html" style="margin-right:10px">
-      <img src="../img/language/english.png" height="26px" width="40px" href="dostavaEng.html">
+      <a href="dostava.html" onclick="ucitajSrpski()"><img src="../img/language/serbian.png" height="26px" width="40px" href="dostava.html" style="margin-right:10px"></a>
+      <a href="#"><img src="../img/language/english.png" height="26px" width="40px" href="dostavaEng.html"></a>
     </div>
   </nav>
 
