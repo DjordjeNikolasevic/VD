@@ -21,7 +21,7 @@
 			var mail=document.getElementById("eposta").value;
 			var telefon=document.getElementById("telefon").value;
 			var adresa=document.getElementById("adresa").value;
-			var regadresa=/^[a-zA-Z]{2,}\s\d{1,}$/;
+			var regadresa=/^[a-zA-Z\s]{2,}\s\d{1,}$/;
 			if(regime.test(ime)){
 				if(regprezime.test(prezime)){
 					if(regtelefon.test(telefon)){
