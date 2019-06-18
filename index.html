@@ -28,8 +28,8 @@
 			for (i = 0; i < arr.length ; i++)
 			{
 				var ocena=0;
-				if(arr[i].length>0){
-					for (i = 0; i < arr[i].ocene.length ; j++){
+				if(arr[i].ocene.length>0){
+					for (var j = 0; j < arr[i].ocene.length ; j++){
 						ocena+=arr[i].ocene[j];
 					}
 					ocena/=arr[i].ocene.length;
@@ -40,6 +40,8 @@
 					third = second;
 					second = first;
 					first = ocena;
+					thirdRest=secondRest;
+					secondRest=firstRest;
 					firstRest=arr[i];
 				}
 
@@ -48,19 +50,21 @@
 				{
 					third = second;
 					second = ocena;
+					thirdRest=secondRest;
 					secondRest=arr[i];
 				}
 
-				else if (ocena > third)
+				else if (ocena > third){
 					third = ocena;
 					thirdRest=arr[i];
+				}
 			}
 
 			document.getElementById("restoran1Naslov").innerHTML=firstRest.ime;
 			var ocena=0;
 			if(firstRest.ocene.length>0){
-				for(var i=0;i<firstRest.ocene.length;i++){
-					ocena+=firstRest.ocene[i];
+				for(var j=0;j<firstRest.ocene.length;j++){
+					ocena+=firstRest.ocene[j];
 				}
 				ocena/=firstRest.ocene.length;
 			}
@@ -74,8 +78,8 @@
 			document.getElementById("restoran2Naslov").innerHTML=secondRest.ime;
 			var ocena=0;
 			if(secondRest.ocene.length>0){
-				for(var i=0;i<secondRest.ocene.length;i++){
-					ocena+=secondRest.ocene[i];
+				for(var j=0;j<secondRest.ocene.length;j++){
+					ocena+=secondRest.ocene[j];
 				}
 				ocena/=secondRest.ocene.length;
 			}
@@ -88,8 +92,8 @@
 			document.getElementById("restoran3Naslov").innerHTML=thirdRest.ime;
 			var ocena=0;
 			if(thirdRest.ocene.length>0){
-				for(var i=0;i<thirdRest.ocene.length;i++){
-					ocena+=thirdRest.ocene[i];
+				for(var j=0;j<thirdRest.ocene.length;j++){
+					ocena+=thirdRest.ocene[j];
 				}
 				ocena/=thirdRest.ocene.length;
 			}
