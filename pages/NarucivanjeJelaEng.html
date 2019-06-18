@@ -13,9 +13,9 @@
 
      var restoran=JSON.parse(localStorage.getItem("restoran"));
      var nizjela=restoran["jela"];
-      document.getElementById('zaUbaciti').innerHTML="<h1>Oznacite jela koja zelite da porucite iz restorana: "+restoran["ime"]+"</h1>";
+      document.getElementById('zaUbaciti').innerHTML="<h1>Mark the meals you want to order from a restaurant: "+restoran["ime"]+"</h1>";
       for (i=0;i<nizjela.length;i++){
-        document.getElementById('zaUbaciti').innerHTML=document.getElementById('zaUbaciti').innerHTML+"<div class='col-sm-12 col-md-8'><img class='img-fluid' src='../"+nizjela[i]['slika']+"'><div class='custom-control custom-checkbox'><h2>"+nizjela[i]["naziv"]+"</h2><input type='checkbox' class='custom-control-input' onchange='ubaciUKorpu()' id='customCheck"+i+"'><label class='custom-control-label' for='customCheck"+i+"'>Cena: "+nizjela[i]['cena']+" RSD</label><br></div></div><hr>";
+        document.getElementById('zaUbaciti').innerHTML=document.getElementById('zaUbaciti').innerHTML+"<div class='col-sm-12 col-md-8'><img class='img-fluid' src='../"+nizjela[i]['slika']+"'><div class='custom-control custom-checkbox'><h2>"+nizjela[i]["naziv"]+"</h2><input type='checkbox' class='custom-control-input' onchange='ubaciUKorpu()' id='customCheck"+i+"'><label class='custom-control-label' for='customCheck"+i+"'>Price: "+nizjela[i]['cena']+" RSD</label><br></div></div><hr>";
       }
     }
     function idiNaPlacanje(){
@@ -38,9 +38,9 @@
       }
       if (selektovanoNesto==true){
         sessionStorage.setItem("trenutnaNarudzbina",JSON.stringify(narudzbina));
-        window.location.replace("kupovina.html");
+        window.location.replace("kupovinaEng.html");
       }
-      else alert("Morate poruciti neko jelo.")
+      else alert("You must order at least one meal.")
     }
 
     function ubaciUKorpu(){
@@ -54,7 +54,7 @@
           suma=suma+parseInt(nizjela[i]["cena"]);
         }
       }
-      document.getElementById("tablica").innerHTML=document.getElementById("tablica").innerHTML+"<tr><td><hr style='border-color:white;'><font color='white'>Ukupno: "+suma+" RSD</font><td></tr>"
+      document.getElementById("tablica").innerHTML=document.getElementById("tablica").innerHTML+"<tr><td><hr style='border-color:white;'><font color='white'>Total: "+suma+" RSD</font><td></tr>"
 
     }
   </script>
